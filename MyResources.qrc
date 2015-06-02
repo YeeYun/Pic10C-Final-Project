@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>frozen.jpeg</file>
+        <file>frozen.jpg</file>
+        <file>frozen1.jpg</file>
+        <file>Olaf_from_Disney's_Frozen (1).png</file>
+        <file>33406807-snowball-icon-isolated-on-white-background-vector-illustration.jpg</file>
+        <file>Frozen-Snowman-1024x640.jpg</file>
+        <file>rsz_133406807-snowball-icon-isolated-on-white-background-vector-illustration.jpg</file>
+        <file>rsz_frozen-snowman-1024x640.jpg</file>
+        <file>rsz_marshmallow.png</file>
+        <file>rsz_olaf_from_disneys_frozen_1.png</file>
+        <file>rsz_frozen1.jpg</file>
+    </qresource>
+</RCC>
