@@ -11,11 +11,11 @@ extern Game* game;
 MyBullet::MyBullet(QGraphicsItem* parent) : QObject(), QGraphicsPixmapItem(parent)
 {
     // draw the rect
-    //setRect(0,0,10,50);
+
 
     // draw the image
-    setPixmap(QPixmap(":/images/rsz_133406807-snowball-icon-isolated-on-white-background-vector-illustration.jpg"));
-    //QGraphicsPixmapItem::BoundingRectShape;
+    setPixmap(QPixmap(":/images/rsz_snowball.png"));
+
 
     // connect
     QTimer * timer = new QTimer();
