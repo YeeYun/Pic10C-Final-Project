@@ -10,7 +10,7 @@ int health = 3;
 MyEnemy::MyEnemy():QObject(),QGraphicsPixmapItem()
 {
     int random_number = rand() % 700;
-    setPos(random_number,0);
+    setPos(0,random_number);
 
     // draw the rect
     //setRect(0,0,100,100);
@@ -28,8 +28,8 @@ MyEnemy::MyEnemy():QObject(),QGraphicsPixmapItem()
 
 void MyEnemy::move()
 {
-    setPos(x(),y()+5);
-    if(pos().y() >600){
+    setPos(x()+5,y());
+    if(pos().x() >700){
         // decrease the score
         game->health->decrease();
         scene()->removeItem(this);

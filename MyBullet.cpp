@@ -44,7 +44,7 @@ void MyBullet::move()
     }
 
     // move bullets up
-    setPos(x(),y()-10);
+    setPos(x()-10,y());
     if(pos().y()< 0){
         scene()->removeItem(this);
         delete this;

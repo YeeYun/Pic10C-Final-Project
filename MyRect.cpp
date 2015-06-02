@@ -14,24 +14,24 @@ MyRect::MyRect(QGraphicsItem *parent) : QGraphicsPixmapItem(parent)
 
 void MyRect::keyPressEvent(QKeyEvent *event)
 {
-    if(event->key() == Qt :: Key_Left){
+    /*if(event->key() == Qt :: Key_Left){
         if(pos().x()>0)
         setPos(x()-20,y());
     }
     else if (event->key() == Qt :: Key_Right){
         if(pos().x() +100 < 800)
         setPos(x()+20, y());
-    }
-    /*else if (event->key() == Qt :: Key_Up){
-        setPos(x(), y()-10);
+    }*/
+    if (event->key() == Qt :: Key_Up){
+        setPos(x(), y()-20);
     }
     else if (event->key() == Qt :: Key_Down){
-            setPos(x(), y()+10);
-    }*/
+            setPos(x(), y()+20);
+    }
     else if (event->key() == Qt :: Key_Space){
         //Create a Bullet
         MyBullet * bullet = new MyBullet();
-        bullet->setPos(x(),y());
+        bullet->setPos(x(),y()+50);
         //qDebug() << "hahaha";
         scene()->addItem(bullet);
     }

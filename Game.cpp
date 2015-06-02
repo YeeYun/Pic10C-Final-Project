@@ -30,7 +30,7 @@ Game::Game()
 
     player = new MyRect();
     //player->setRect(0,0,100,100);
-    player->setPos(400,500);
+    player->setPos(scene->width()-200,250);
 
     player->setFlag(QGraphicsItem::ItemIsFocusable);
     player->setFocus();
@@ -59,7 +59,7 @@ Game::Game()
 
     QPushButton* quit1 = new QPushButton("Quit");
     quit1->resize(100,70);
-    quit1->move(scene->width()-200,0);
+    quit1->move(scene->width()-770,550);
     QFont newFont("Courier", 20, QFont::Bold, true);
     quit1->setFont(newFont);
     quit1->setStyleSheet("border-style: outset; border-width: 2px; border-radius: 10px; border-color: beige; font: bold 14px;min-width: 10em; padding: 6px");
