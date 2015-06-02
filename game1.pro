@@ -11,7 +11,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = game1
 TEMPLATE = app
 QMAKE_MAC_SDK = macosx10.9
-
+QMAKE_CXXFLAGS += -std=c++0x
+CONFIG += c++11
 SOURCES += main.cpp \
     MyRect.cpp \
     MyBullet.cpp \

@@ -9,7 +9,7 @@ public:
     void decrease ();
     int getHealth();
 private:
-    int health;
+    static int health1;
 };
 
 

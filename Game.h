@@ -21,7 +21,7 @@ public:
     MyScore * score;
     MyHealth * health;
     void gameover();
-
+    //int life;
     //void displayMainMenu();
 //public slots:
     //void start();

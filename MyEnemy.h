@@ -4,6 +4,8 @@
 #include <QGraphicsRectItem>
 #include <QObject>
 #include <QGraphicsPixmapItem>
+#include <random>
+#include <chrono>
 
 class MyEnemy: public QObject, public QGraphicsPixmapItem{
     Q_OBJECT

@@ -11,11 +11,14 @@
 #include <QGraphicsTextItem>
 #include <QGraphicsProxyWidget>
 #include <QFont>
+#include <QDebug>
 
 
 
 Game::Game()
 {
+    //life = 3;
+
     // create the scene
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,800,900);
@@ -50,6 +53,8 @@ Game::Game()
     scene->addItem(health);
 
 
+
+
     QGraphicsTextItem* instruction = new QGraphicsTextItem("Instructions: \n 1. shoot the snow at your enemy. \n 2. You will win a point when you kill one enemy. \n 3. You will lose a life if your enemy gets out safely. \n 4. You can move your player by pressing left and right key. \n 5. Press the space key to destroy your enemy.");
     instruction -> setPos(health->x(), health->y()+50);
     scene->addItem(instruction);
@@ -72,9 +77,10 @@ Game::Game()
     QObject::connect(timer,SIGNAL(timeout()), player, SLOT(spawn()));
     timer->start(2000);
 
-    if (this->health->getHealth()==0){
-        gameover();
-    }
+   // if (health->getHealth()<4){
+        //gameover();
+     //qDebug()<<this->health->getHealth();
+    //}
 }
 
 
@@ -85,6 +91,8 @@ void Game::gameover()
     for (size_t i = 0, n = scene->items().size(); i < n; i++){
         scene->items()[i]->setEnabled(false);
     }
+
+
 
     QGraphicsTextItem* overText = new QGraphicsTextItem("You lost");
     overText->setPos(0,0);
