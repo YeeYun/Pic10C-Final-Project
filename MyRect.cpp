@@ -23,15 +23,17 @@ void MyRect::keyPressEvent(QKeyEvent *event)
         setPos(x()+20, y());
     }*/
     if (event->key() == Qt :: Key_Up){
+        if(pos().y()>0)
         setPos(x(), y()-20);
     }
     else if (event->key() == Qt :: Key_Down){
+        if(pos().y()<400)
             setPos(x(), y()+20);
     }
     else if (event->key() == Qt :: Key_Space){
         //Create a Bullet
         MyBullet * bullet = new MyBullet();
-        bullet->setPos(x(),y()+50);
+        bullet->setPos(x(),y()+55);
         //qDebug() << "hahaha";
         scene()->addItem(bullet);
     }

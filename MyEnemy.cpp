@@ -13,7 +13,7 @@ std::default_random_engine generator (seed);
 
 MyEnemy::MyEnemy():QObject(),QGraphicsPixmapItem()
 {
-    std::uniform_int_distribution<int> distribution(0,700);
+    std::uniform_int_distribution<int> distribution(0,470);
     int random_number = distribution(generator);
     setPos(0,random_number);
 
@@ -34,7 +34,7 @@ MyEnemy::MyEnemy():QObject(),QGraphicsPixmapItem()
 void MyEnemy::move()
 {
     setPos(x()+5,y());
-    if(pos().x() >700){
+    if(pos().x() >1000){
         // decrease the score
         game->health->decrease();
         //int a = game->health->getHealth() ;
