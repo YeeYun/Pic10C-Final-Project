@@ -47,7 +47,8 @@ void MyEnemy::move()
             game->scene->clear();
             QGraphicsTextItem* overText = new QGraphicsTextItem("Sorry, You lost >_<");
             overText->setFont(QFont("Comic Sans MS",20,QFont::Bold));
-            overText->setPos(350, 250);
+            overText->setPos(400, 250);
+            overText->setDefaultTextColor("white");
             game->scene->addItem(overText);
 
             QPushButton* quit1 = new QPushButton("Quit");
