@@ -7,7 +7,6 @@
 #include "Game.h"
 #include <QImage>
 #include <QPushButton>
-//#include "Button.h"
 #include <QGraphicsTextItem>
 #include <QGraphicsProxyWidget>
 #include <QFont>
@@ -122,7 +121,7 @@ void Game:: start()
     // create the scene
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,1000,600);
-    QImage back (":/images/rsz_frozen1.jpg");
+    QImage back (":/images/rsz_1frozen.jpg");
     setBackgroundBrush(QBrush(back));
 
     setFixedSize(1000,600);
@@ -158,7 +157,7 @@ void Game:: start()
 
     QPushButton* quit1 = new QPushButton("Quit");
     quit1->resize(60,50);
-    quit1->move(scene->width()-950,500);
+    quit1->move(scene->width()-975,545);
     QFont newFont("Courier", 20, QFont::Bold, true);
     quit1->setFont(newFont);
     quit1->setStyleSheet("border-style: outset; border-width: 2px; border-radius: 20px; border-color: blue; font: bold 14px;min-width: 10em; padding: 6px");

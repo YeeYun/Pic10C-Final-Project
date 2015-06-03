@@ -13,7 +13,7 @@ std::default_random_engine generator (seed);
 
 MyEnemy::MyEnemy():QObject(),QGraphicsPixmapItem()
 {
-    std::uniform_int_distribution<int> distribution(0,470);
+    std::uniform_int_distribution<int> distribution(0,450);
     int random_number = distribution(generator);
     setPos(0,random_number);
 
