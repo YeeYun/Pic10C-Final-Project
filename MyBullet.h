@@ -1,5 +1,6 @@
 #ifndef MYBULLET_H
 #define MYBULLET_H
+
 #include <QGraphicsRectItem>
 #include <QObject>
 #include <QGraphicsPixmapItem>

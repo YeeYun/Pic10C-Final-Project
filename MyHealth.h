@@ -1,5 +1,6 @@
 #ifndef MYHEALTH_H
 #define MYHEALTH_H
+
 #include <QGraphicsTextItem>
 
 class MyHealth:public QGraphicsTextItem{

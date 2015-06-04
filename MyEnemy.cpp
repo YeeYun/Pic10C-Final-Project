@@ -1,13 +1,15 @@
-#include "MyEnemy.h"
 #include <QTimer>
 #include <QGraphicsScene>
 #include <stdlib.h>
 #include <QDebug>
-#include "Game.h"
 #include <QPushButton>
+#include "Game.h"
+#include "MyEnemy.h"
+
+//This is to help us to create a "Global" variable of a pointer to Game
 extern Game* game;
 
-
+//The following two lines used the c++ 11 standard to randomly generate the number
 unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
 std::default_random_engine generator (seed);
 
@@ -34,7 +36,7 @@ MyEnemy::MyEnemy():QObject(),QGraphicsPixmapItem()
 void MyEnemy::move()
 {
     setPos(x()+5,y());
-    if(pos().x() >1000){
+    if(pos().x() >950){
         // decrease the score
         game->health->decrease();
         //int a = game->health->getHealth() ;
@@ -52,7 +54,7 @@ void MyEnemy::move()
             game->scene->addItem(overText);
 
             QPushButton* quit1 = new QPushButton("Quit");
-            quit1->resize(100,70);
+            quit1->resize(60,50);
             quit1->move(overText->x(),overText->y()+50);
             //QFont newFont("Courier", 20, QFont::Bold, true);
             //quit1->setFont(newFont);
@@ -60,13 +62,6 @@ void MyEnemy::move()
             game->scene->addWidget(quit1);
             QObject::connect(quit1,SIGNAL(clicked()),game,SLOT(close()));
 
-            //game->scene->removeItem(game->player);
-
-            //game->scene->removeItem(game->);
-            /*for (size_t i = 0, n = scene()->items().size(); i < n; i++){
-                scene()->items()[i]->setEnabled(false);
-            }*/
-          //qDebug()<<getHealth();
         }
     }
 }

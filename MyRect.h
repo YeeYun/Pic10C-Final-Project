@@ -1,5 +1,6 @@
 #ifndef MYRECT_H
 #define MYRECT_H
+
 #include <QObject>
 #include <QGraphicsRectItem>
 #include <QGraphicsPixmapItem>
